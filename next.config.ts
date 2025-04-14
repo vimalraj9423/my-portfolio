@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath: "/my-portfolio", // Add your repository name
+  output: "export"
 };
 
 export default nextConfig;
