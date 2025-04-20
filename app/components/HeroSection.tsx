@@ -19,7 +19,7 @@ function HeroSection(){
         <div className="flex-1 flex justify-center pb-[55px]">
             <div className="flex width-80 height-full justify-center items-end relative">
             <Image className="w-full max-h-full" src="circlebackground.svg" alt="" width={432} height={490}/>
-            <Image className="absolute max-w-[calc(75%)] max-h-full" src="vimal.svg" alt="" width={494} height={494}/>
+            <Image className="absolute max-h-full" src="vimal.svg" alt="" width={494} height={494}/>
             </div>
         </div>
 
