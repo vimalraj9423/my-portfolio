@@ -6,7 +6,7 @@ function AboutMe() {
       <div className="justify-start text-[var(--primary-2)] text-2xl font-bold font-['Inter'] leading-9">
         About me:
       </div>
-      <p className="text-white text-xl font-medium font-['Raleway'] leading-7 tracking-wide">
+      <p className="text-xl font-medium font-['Raleway'] leading-7 tracking-wide">
         I am a Front-End Developer specializing in building high-performance,
         scalable web applications using React.js, Tailwind CSS, and GitHub
         Actions. With experience in Node.js, Spring Boot, and Docker, I develop

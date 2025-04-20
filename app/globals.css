@@ -9,8 +9,16 @@
   --font-raleway: "Raleway", sans-serif;
 }
 :root {
-  --background: #ffffff;
+  --background: #FFF5EE;
   --foreground: #171717;
+  --color-primary: #2BADAD; 
+  --title-color: linear-gradient(to right, #59A8A8, #00FF51);
+  --primary-2: #1e1e1e;
+  --hover-grey:#BFBFBF;
+  --hero-background:linear-gradient(295deg, #ffffff, #36ade930);
+  --color-hero-from:#d2d6d5;
+  --color-hero-to: #008080;
+  --name-height-light: #FFDAB9;
 }
 
 @theme inline {
@@ -18,7 +26,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --hero-section: calc(100vh - 56px);
+  --hero-section: calc(100vh - 56px); 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +36,9 @@
     --background: #121212;
     --foreground: #fff;
     --primary-2: #00FFFF;
-    --hover-grey:#BFBFBF;
+    --hover-grey:#BFBFBF; 
+  --hero-background:#121212; 
+  --name-height-light: var(--primary-2);
 }
 }
 
