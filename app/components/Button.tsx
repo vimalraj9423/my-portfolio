@@ -9,7 +9,7 @@ interface ButtonPropss extends React.ButtonHTMLAttributes<HTMLButtonElement>{
 function Button({children,className,isOutLine,isPrimary,iconName,...rest}:ButtonPropss){
     const classNames =["rounded","py-[10px] px-1","text-sm","font-medium","flex justify-center gap-1"];
     if(isPrimary){
-        classNames.push("bg-[var(--color-primary-2)]")
+        classNames.push("bg-[var(--color-primary)]")
     }
     if(isOutLine){
         classNames.push('border-1 border-white')
