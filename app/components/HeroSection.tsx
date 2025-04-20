@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Button from "./Button"; 
 function HeroSection(){
-    return <div className="flex col h-[var(--hero-section)] px-20 py-14 gap-10">
-        <div className="flex-1">
-    <div className="flex  flex-col justify-end h-full py-[55px] font-(family-name:--font-raleway) ">
+    return <div className="flex flex-col-reverse md:flex-row h-[var(--hero-section)] px-10 md:px-20 py-10 md:py-14 gap-10">
+        <div className="md:flex-1">
+    <div className="flex  flex-col justify-end h-full md:py-[55px] font-(family-name:--font-raleway) ">
             <h2 className="text-3xl font-semibold">Hello, I&apos;m</h2>
             <h1 className="text-4xl font-bold">Vimal <span className="text-[var(--primary-2)]">Raj V</span> </h1>
             <h6 className="text-base font-semibold">Front-End Developer specializing in React.js, Tailwind CSS & GitHub Actions. Crafting seamless UI experiences with scalable solutions.</h6>
@@ -16,7 +16,7 @@ function HeroSection(){
             </div>
         </div>
         </div>
-        <div className="flex-1 flex justify-center pb-[55px]">
+        <div className="md:flex-1 flex justify-center md:pb-[55px]">
             <div className="flex width-80 height-full justify-center items-end relative">
             <Image className="w-full max-h-full" src="circlebackground.svg" alt="" width={432} height={490}/>
             <Image className="absolute max-h-full" src="vimal.svg" alt="" width={494} height={494}/>
