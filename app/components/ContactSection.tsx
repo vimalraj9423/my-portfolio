@@ -1,3 +1,6 @@
+import Button from "./Button";
+import Input from "./Input";
+
 function ContactSection() {
   return (
     <div className="px-10 md:px-20 py-5 md:py-10 flex flex-col md:flex-row">
@@ -9,10 +12,14 @@ function ContactSection() {
         <h3 className="text-white text-base font-semibold font-['Raleway']">
           Contact me. Lets make magic together
         </h3>
-        <input name="Name" className="" />
-        <input name="Email" />
-        <textarea name="Email" />
-        <button>Send</button>
+        <div className="flex-1 flex flex-col gap-3 items-start ">
+          <Input placeHolder="Name" />
+          <Input placeHolder="Email" />
+          <Input placeHolder="Email" isTextArea />
+          <Button isPrimary iconName={"person.svg"}>
+            Send
+          </Button>
+        </div>
       </div>
     </div>
   );

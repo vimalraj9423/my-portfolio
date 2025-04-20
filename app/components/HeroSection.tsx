@@ -2,7 +2,7 @@ import Image from "next/image";
 import Button from "./Button";
 function HeroSection() {
   return (
-    <div className="bg-linear-[295deg,var(--color-hero-from)_44%,var(--color-hero-to)_44%] flex flex-col-reverse md:flex-row h-[var(--hero-section)] px-10 md:px-20 py-10 md:py-14 gap-10">
+    <div className="bg-linear-[310deg,var(--color-hero-from)_19%,var(--color-hero-to)_82%] dark:bg-none flex flex-col-reverse md:flex-row h-[var(--hero-section)] px-10 md:px-20 py-10 md:py-14 gap-10">
       <div className="md:flex-1">
         <div className="flex  flex-col justify-end h-full md:py-[55px] font-(family-name:--font-raleway) gap-1">
           <h2 className="text-3xl font-semibold text-white">Hello, I&apos;m</h2>
