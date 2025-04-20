@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="bg-gray-900 text-white py-4 px-6 sticky top-0">
+    <header className="text-white py-4 px-6 sticky top-0">
       <nav className="flex justify-between items-center">
         <h1 className="text-xl font-bold bg-gradient-to-r from-[#59A8A8] to-[#00FF51] bg-clip-text text-transparent ">Vimal Raj</h1>
         <ul className="flex space-x-6">
