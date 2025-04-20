@@ -7,7 +7,7 @@ function Skills() {
         SKILLS
       </div>
       <div className="text-center">Front End</div>
-      <div className="flex justify-center gap-2">
+      <div className="flex flex-wrap justify-center gap-2">
         <SkillCard />
         <SkillCard />
         <SkillCard />
@@ -15,7 +15,7 @@ function Skills() {
         <SkillCard />
       </div>
       <div className="text-center">Back End</div>
-      <div className="flex justify-center gap-2">
+      <div className="flex flex-wrap justify-center gap-2">
         <SkillCard />
         <SkillCard />
         <SkillCard />
@@ -23,7 +23,7 @@ function Skills() {
         <SkillCard />
       </div>
       <div className="text-center">Others</div>
-      <div className="flex justify-center gap-2">
+      <div className="flex flex-wrap justify-center gap-2">
         <SkillCard />
         <SkillCard />
         <SkillCard />

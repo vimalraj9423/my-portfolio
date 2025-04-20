@@ -30,7 +30,7 @@ function AboutMe() {
       <div className="text-2xl font-medium font-['Poppins'] text-[var(--primary-2)]">
         The services i offer:
       </div>
-      <div className="flex flex-col md:flex-row w-full gap-4">
+      <div className="grid md:grid-cols-4   lg:grid-cols-5 w-full gap-4">
         <ServiceCard iconName="browsericon.svg">
           WEB
           <br />

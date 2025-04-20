@@ -7,7 +7,7 @@ function HeroSection() {
         <div className="flex  flex-col justify-end h-full md:py-[55px] font-(family-name:--font-raleway) gap-1">
           <h2 className="text-3xl font-semibold text-white">Hello, I&apos;m</h2>
           <h1 className="text-4xl font-bold text-white ">
-            Vimal <span className="text-[var(--primary-2)]">Raj V</span>{" "}
+            Vimal <span className="text-[var(--name-height-light)]">Raj V</span>{" "}
           </h1>
           <h6 className="text-base font-medium text-white  pb-[2px] ">
             Front-End Developer specializing in React.js, Tailwind CSS & GitHub

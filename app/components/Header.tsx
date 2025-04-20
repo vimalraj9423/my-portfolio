@@ -9,13 +9,19 @@ const Header = () => {
         </h1>
         <ul className="flex space-x-6">
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/" className="text-[var(--primary-2)]">
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/about" className="text-[var(--primary-2)]">
+              About
+            </Link>
           </li>
           <li>
-            <Link href="/contact">contact</Link>
+            <Link href="/contact" className="text-[var(--primary-2)]">
+              contact
+            </Link>
           </li>
         </ul>
       </nav>
