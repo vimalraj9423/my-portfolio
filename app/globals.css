@@ -28,7 +28,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --hero-section: calc(100vh - 56px); 
-}
+} 
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -41,10 +41,25 @@
   --hero-background:#121212; 
   --name-height-light: var(--primary-2);
   --input-background:#757575;
+
+  --color-hero-from:#05202e;
+  --color-hero-to: #000000;
+  --header-background:#071a27;
+  --circle-background:#8e3cec1a;
+  --color-button-from:#55a6a6;
+  --color-button-to:#8192a9;
 }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
 }
