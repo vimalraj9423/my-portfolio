@@ -16,7 +16,11 @@ function ContactSection() {
           <Input placeHolder="Name" />
           <Input placeHolder="Email" />
           <Input placeHolder="Email" isTextArea />
-          <Button isPrimary iconName={"person.svg"}>
+          <Button
+            isPrimary
+            iconName={"person.svg"}
+            className="bg-linear-[350deg,var(--color-button-from),var(--color-button-to)]"
+          >
             Send
           </Button>
         </div>

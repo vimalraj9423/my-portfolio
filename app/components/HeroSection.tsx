@@ -5,12 +5,12 @@ function HeroSection() {
   return (
     <div className="bg-linear-[310deg,var(--color-hero-from),var(--color-hero-to)] dark:bg-linear-[167deg,var(--color-hero-from),var(--color-hero-to)] ">
       <Header />
-      <div className="flex flex-col-reverse md:flex-row h-screen px-10 md:px-20 py-10 md:py-14 gap-10">
+      <div className="flex flex-col-reverse md:flex-row h-[var(--hero-section)] px-10 md:px-20 py-10 md:py-14 gap md:gap-10">
         <div className="md:flex-1">
           <div className="flex  flex-col justify-end h-full md:py-[55px] font-(family-name:--font-raleway) gap-1">
-            <section className="flex items-center justify-center   px-6">
+            <section className="none md:flex md:items-center md:justify-center   ">
               <div className="max-w-4xl text-center">
-                <h1 className="text-5xl font-extrabold leading-tight  text-gray-300   dark:bg-gradient-to-r dark:from-blue-500 dark:via-purple-500 dark:to-pink-500 dark:text-transparent bg-clip-text md:text-7xl fade-in ">
+                <h1 className="text-left text-xs md:text-5xl font-extrabold leading-tight  text-gray-300   dark:bg-gradient-to-r dark:from-blue-500 dark:via-purple-500 dark:to-pink-500 dark:text-transparent bg-clip-text md:text-7xl fade-in ">
                   &quot;Your biggest dreams start with the smallest steps.&quot;
                 </h1>
                 {/* <p className="mt-6 text-lg text-gray-600 md:text-xl">
@@ -60,7 +60,7 @@ function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="md:flex-1 flex justify-center md:pb-[55px]">
+        <div className="md:flex-1 flex h-[200px] md:h-full md:justify-center md:pb-[55px]">
           <div className="flex width-80 height-full justify-center items-end relative">
             <Image
               className="w-full max-h-full rounded-full bg-[var(--circle-background)]"
