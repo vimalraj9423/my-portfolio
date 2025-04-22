@@ -10,7 +10,7 @@ function HeroSection() {
           <div className="flex  flex-col justify-end h-full md:py-[55px] font-(family-name:--font-raleway) gap-1">
             <section className="none md:flex md:items-center md:justify-center   ">
               <div className="max-w-4xl text-center">
-                <h1 className="text-left text-xs md:text-5xl font-extrabold leading-tight  text-gray-300   dark:bg-gradient-to-r dark:from-blue-500 dark:via-purple-500 dark:to-pink-500 dark:text-transparent bg-clip-text md:text-xl lg:text-7xl md:animate-bounce lg:animate-none lg:fade-in ">
+                <h1 className="text-left text-xs xl:text-5xl font-extrabold leading-tight  text-gray-300   dark:bg-gradient-to-r dark:from-blue-500 dark:via-purple-500 dark:to-pink-500 dark:text-transparent bg-clip-text md:text-xl ">
                   &quot;Your biggest dreams start with the smallest steps.&quot;
                 </h1>
                 {/* <p className="mt-6 text-lg text-gray-600 md:text-xl">
@@ -25,7 +25,7 @@ function HeroSection() {
               Vimal{" "}
               <span className="text-[var(--name-height-light)]">Raj V</span>{" "}
             </h1>
-            <h6 className="text-base font-medium text-white  pb-[2px] ">
+            <h6 className="text-lg font-medium text-white  pb-[2px] ">
               Front-End Developer specializing in React.js, Tailwind CSS &
               GitHub Actions. Crafting seamless UI experiences with scalable
               solutions.
