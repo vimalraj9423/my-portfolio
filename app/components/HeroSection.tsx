@@ -10,7 +10,7 @@ function HeroSection() {
           <div className="flex  flex-col justify-end h-full md:py-[55px] font-(family-name:--font-raleway) gap-1">
             <section className="none md:flex md:items-center md:justify-center   ">
               <div className="max-w-4xl text-center">
-                <h1 className="text-left text-xs md:text-5xl font-extrabold leading-tight  text-gray-300   dark:bg-gradient-to-r dark:from-blue-500 dark:via-purple-500 dark:to-pink-500 dark:text-transparent bg-clip-text md:text-7xl fade-in ">
+                <h1 className="text-left text-xs md:text-5xl font-extrabold leading-tight  text-gray-300   dark:bg-gradient-to-r dark:from-blue-500 dark:via-purple-500 dark:to-pink-500 dark:text-transparent bg-clip-text md:text-xl lg:text-7xl md:animate-bounce lg:animate-none lg:fade-in ">
                   &quot;Your biggest dreams start with the smallest steps.&quot;
                 </h1>
                 {/* <p className="mt-6 text-lg text-gray-600 md:text-xl">

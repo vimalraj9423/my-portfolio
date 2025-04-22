@@ -26,6 +26,14 @@ const Header = () => {
           </li>
           <li>
             <Link
+              href="/skills"
+              className="bg-linear-[135deg,#9fb9ee,#e1e1e1] text-transparent bg-clip-text uppercase text-bold text-base md:text-2xl"
+            >
+              skills
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/contact"
               className="bg-linear-[135deg,#9fb9ee,#e1e1e1] text-transparent bg-clip-text uppercase text-bold text-base md:text-2xl"
             >
