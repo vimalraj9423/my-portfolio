@@ -1,25 +1,34 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
-@theme {
+/* Removed @theme block, moved font variables to :root */
+:root { 
+  --color-primary: #A53DFF; 
+  
   --font-raleway: "Raleway", sans-serif;
+  --font-lato: "Lato", sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-work-sans: 'Work Sans', sans-serif;
+
+  --natural-black: #333333;
+  --gray-white: #ffffff;
+  --gray-900: #132238;
+  --gray-600: #556070;
+--gray-300:#A5ACB5;
+  --light-primay-background: #EDD8FF;
+  --grey-1:#556070;
+  --gray-50:#F0F1F3;
 }
-:root {
-  --background: #FAFAFA;
-  --foreground: #171717;
-  --color-primary: #2BADAD; 
-  --title-color: linear-gradient(to right, #59A8A8, #00FF51);
-  --primary-2: #1e1e1e;
-  --hover-grey:#BFBFBF;
-  --hero-background:linear-gradient(295deg, #ffffff, #36ade930);
-  --color-hero-from:#c0c0c0;
-  --color-hero-to: #44857e;
-  --name-height-light: #FFDAB9;
-  --input-background:#757575;
+/* Apply Lato font globally for testing */
+body {
+  font-family: var(--font-poppins);
 }
 
 @theme inline {
@@ -27,23 +36,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-lato: var(--font-lato);
   --hero-section: calc(100vh - 56px); 
 } 
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #2BADAD; 
-    --title-color: linear-gradient(to right, #59A8A8, #00FF51);
-    --background: #121212;
-    --foreground: #fff;
-    --primary-2: #00FFFF;
-    --hover-grey:#BFBFBF; 
-  --hero-background:#121212; 
-  --name-height-light: var(--primary-2);
-  --input-background:#757575;
+    --color-primary: #A53DFF; 
 
-  --color-hero-from:#05202e;
-  --color-hero-to: #000000;
   --header-background:#071a27;
   --circle-background:#8e3cec1a;
   --color-button-from:#55a6a6;
@@ -52,8 +52,7 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  font-family: var(--font-work-sans);
 }
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -62,4 +61,11 @@ body {
 
 .fade-in {
   animation: fadeIn 1s ease-in-out;
+}
+
+.heading3{
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  font-family: var(--font-work-sans);
 }

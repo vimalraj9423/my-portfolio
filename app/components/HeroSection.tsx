@@ -1,85 +1,53 @@
-import Image from "next/image";
-import Button from "./Button";
-import Header from "./Header";
-function HeroSection() {
+import React from "react";
+
+export const HeroSection: React.FC = () => {
+  const stats = [
+    { label: "Experience", value: "8 Y." },
+    { label: "Projects", value: "20+" },
+    { label: "Clients", value: "10" },
+  ];
   return (
-    <div className="bg-linear-[310deg,var(--color-hero-from),var(--color-hero-to)] dark:bg-linear-[167deg,var(--color-hero-from),var(--color-hero-to)] ">
-      <Header />
-      <div className="flex flex-col-reverse md:flex-row h-[var(--hero-section)] px-10 md:px-20 py-10 md:py-14 gap md:gap-10">
-        <div className="md:flex-1">
-          <div className="flex  flex-col justify-end h-full md:py-[55px] font-(family-name:--font-raleway) gap-1">
-            <section className="none md:flex md:items-center md:justify-center   ">
-              <div className="max-w-4xl text-center">
-                <h1 className="text-left text-xs xl:text-5xl font-extrabold leading-tight  text-gray-300   dark:bg-gradient-to-r dark:from-blue-500 dark:via-purple-500 dark:to-pink-500 dark:text-transparent bg-clip-text md:text-xl ">
-                  &quot;Your biggest dreams start with the smallest steps.&quot;
-                </h1>
-                {/* <p className="mt-6 text-lg text-gray-600 md:text-xl">
-                  Believe, act, and make it happen.
-                </p> */}
-              </div>
-            </section>
-            <h2 className="text-3xl font-semibold text-white">
-              Hello, I&apos;m
-            </h2>
-            <h1 className="text-4xl font-bold text-white ">
-              Vimal{" "}
-              <span className="text-[var(--name-height-light)]">Raj V</span>{" "}
+    <section className="">
+      <div className="max-w-[1440px] mx-auto h-[100vh - 96px] flex px-9 mt-[100px] gap-45">
+        <div className="flex-1 flex flex-col items-center">
+          <div className="flex flex-col items-start gap-6 mt-20">
+            <h1 className="text-5xl font-bold text-[var(--gray-900)]">
+              Hello, I’m Vimal Raj
             </h1>
-            <h6 className="text-lg font-medium text-white  pb-[2px] ">
-              Front-End Developer specializing in React.js, Tailwind CSS &
-              GitHub Actions. Crafting seamless UI experiences with scalable
-              solutions.
-            </h6>
-
-            <div className="flex flex-row gap-3 ">
-              <Button
-                isPrimary
-                className="max-w-[166px] w-full leading-tight bg-linear-[350deg,var(--color-button-from),var(--color-button-to)]"
-                iconName={"person.svg"}
-              >
-                About Me
-              </Button>
-              <Button
-                isOutLine
-                className="max-w-[166px] w-full leading-tight"
-                iconName={"Eye.svg"}
-              >
-                Projects
-              </Button>
-            </div>
-
-            <div className="flex px-[10px] pt-[10px] pb-[15px] gap-[25px]">
-              <Image src={"githu.svg"} alt="github" width="30" height={30} />{" "}
-              <Image
-                height={30}
-                src={"linkedin.svg"}
-                alt="linked in"
-                width="30"
-              />{" "}
-              <Image height={30} width="40" alt="mail" src={"mail.svg"} />
+            <h2 className="text-base font-medium text-[var(--grey-1)] ">
+              Im a Freelance UI/UX Designer and Developer based in London,
+              England. I strives to build immersive and beautiful web
+              applications through carefully crafted code and user-centric
+              design.
+            </h2>
+            <button className="mt-8 px-6 py-3 bg-[var(--color-primary)] text-white font-medium rounded hover:bg-[var(--color-primary-dark)] transition duration-300">
+              Say Hello
+            </button>
+            <div className="mt-10 flex space-x-1 w-full gap-2">
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="bg-[var(--light-primay-background)]/50 flex-1 py-5 rounded-lg flex flex-col items-center justify-center"
+                >
+                  <div className="heading3">{stat.value}</div>
+                  <div className="text-sm text-gray-500">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-        <div className="md:flex-1 flex h-[200px] md:h-full md:justify-center md:pb-[55px]">
-          <div className="flex width-80 height-full justify-center items-end relative">
-            <Image
-              className="w-full max-h-full rounded-full bg-[var(--circle-background)]"
-              src="circlebackground.svg"
-              alt=""
-              width={432}
-              height={490}
-            />
-            <Image
-              className="absolute max-h-full"
-              src="/vimal-update.png"
-              alt=""
-              width={494}
-              height={494}
+        <div className="flex-1 ">
+          <div className=" z-1000  max-w-[400px]  bg-white overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="/hero.png"
+              alt="Hero Image"
+              className="w-[500px] h-auto object-cover"
             />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
 export default HeroSection;
