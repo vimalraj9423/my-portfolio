@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Button from "./Button";
 
 export const HeroSection: React.FC = () => {
   const stats = [
@@ -21,9 +22,9 @@ export const HeroSection: React.FC = () => {
               applications through carefully crafted code and user-centric
               design.
             </h2>
-            <button className="mt-8 px-6 py-3 bg-[var(--color-primary)] text-white font-medium rounded hover:bg-[var(--color-primary-dark)] transition duration-300">
+            <Button className="mt-8 px-6 py-3 bg-[var(--color-primary)] text-white font-medium rounded hover:bg-[var(--color-primary-dark)] transition duration-300">
               Say Hello
-            </button>
+            </Button>
             <div className="mt-10 flex space-x-1 w-full gap-2">
               {stats.map((stat, index) => (
                 <div
