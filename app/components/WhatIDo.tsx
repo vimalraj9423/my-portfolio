@@ -17,10 +17,10 @@ export default function WhatIDo() {
     },
   ];
   return (
-    <div className="bg-[var(--gray-50)] py-[100px]  ">
-      <div className="flex justify-center mx-auto px-9 max-w-[1440px]">
-        <div className="flex-1 flex flex-col justify-center items-center">
-          <div className="flex flex-col gap-6 max-w-[529px]">
+    <div className="bg-[var(--gray-50)] py-10 md:py-[100px]  ">
+      <div className="flex flex-col md:flex-row gap-6 justify-center mx-auto px-9 max-w-[1440px]">
+        <div className="flex-1 flex flex-col gap-6 md:gap-12 justify-center items-center">
+          <div className="flex flex-col gap-4 md:gap-6 max-w-[529px]">
             <h1>What I do?</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
@@ -33,7 +33,7 @@ export default function WhatIDo() {
             </p>
           </div>
           <div>
-            <button className="mt-12 px-6 py-3 bg-[var(--color-primary)] text-white font-medium rounded hover:bg-[var(--color-primary-dark)] transition duration-300">
+            <button className="px-6 py-3 bg-[var(--color-primary)] text-white font-medium rounded hover:bg-[var(--color-primary-dark)] transition duration-300">
               Say Hello!
             </button>
           </div>

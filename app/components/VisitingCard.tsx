@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 export default function VisitingCard() {
   return (
-    <div className="max-w-[1440px] mx-auto px-9 mt-[100px]">
-      <div className="p-[112px] gap-[126px] flex bg-white rounded-lg shadow-[0_36px_105px_rgba(43,56,76,0.1)] p-6 w-full  mx-auto transform translate-y-[100px]">
+    <div className="max-w-[1440px] mx-auto px-6 md:px-9 md:mt-[100px]">
+      <div className="p-6 md:p-[112px] gap-[126px] flex flex-col md:flex-row bg-white rounded-lg shadow-[0_36px_105px_rgba(43,56,76,0.1)]  w-full  mx-auto transform translate-y-[100px]">
         <div className="flex-1">
           <div className="max-w-[424px] max-h-[468px] overflow-hidden rounded-lg shadow-lg bg-[#F0F1F3]">
             <img src="/hero.png" alt="Vimal Raj" className="w-full h-full  " />

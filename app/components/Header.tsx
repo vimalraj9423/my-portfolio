@@ -6,15 +6,15 @@ export default function Header() {
   ];
   return (
     <header className="bg-[var(--gray-white)]">
-      <div className="w-full flex items-center justify-between py-5  max-w-[1440px] mx-auto px-9">
-        <div className="flex gap-4 items-center">
+      <div className="w-full flex flex-col md:flex-row items-center justify-between py-5  max-w-[1440px] mx-auto px-6 md:px-9">
+        <div className="flex gap-4 items-center w-full md:w-auto">
           <div className="h-[56px] w-[56px] bg-[var(--color-primary)] text-white font-[var(--font-poppins)] font-medium text-2xl rounded-full flex items-center justify-center">
             V
           </div>
           <h1 className="heading3">Vimal Raj</h1>
         </div>
         <nav>
-          <ul className="flex space-x-4">
+          <ul className="hidden md:flex space-x-4 ">
             {listItems.map((item) => (
               <li key={item.href} className="py-3 px-6">
                 <a

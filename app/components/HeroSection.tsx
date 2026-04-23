@@ -9,7 +9,7 @@ export const HeroSection: React.FC = () => {
   ];
   return (
     <section className="">
-      <div className="max-w-[1440px] mx-auto h-[100vh - 96px] flex px-9 mt-[100px] gap-45">
+      <div className="max-w-[1440px] mx-auto h-[100vh - 96px] flex flex-col md:flex-row px-6 md:px-9 mt-[100px] gap-45">
         <div className="flex-1 flex flex-col items-center">
           <div className="flex flex-col items-start gap-6 mt-20">
             <h1 className="text-5xl font-bold text-[var(--gray-900)]">
@@ -37,7 +37,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 ">
+        <div className="flex-1 hidden md:block">
           <div className=" z-1000  max-w-[400px]  bg-white overflow-hidden rounded-lg shadow-lg">
             <img
               src="/hero.png"
