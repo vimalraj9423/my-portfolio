@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 const BlogCard = () => {
   return (
     <div className="overflow-hidden rounded-lg bg-white transition-all duration-300 hover:-translate-y-2 shadow-[0_36px_105px_rgba(43,56,76,0.1)]">

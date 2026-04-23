@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function VisitingCard() {
   return (
     <div className="max-w-[1440px] mx-auto px-9 mt-[100px]">

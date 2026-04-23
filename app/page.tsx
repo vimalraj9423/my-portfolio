@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Blog from "./components/Blog";
 import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
@@ -10,11 +11,11 @@ import WorkProgress from "./components/WorkProgress";
 
 export default function Home() {
   return (
-    <div>
+    <div className="relative">
       <img
         src="/bg.png"
         alt="Background"
-        className="fixed top-0 left-0 w-full h-[8368px]  -z-10 overflow-hidden"
+        className="absolute top-0 left-0 w-full h-full bottom-0 -z-10 overflow-hidden"
       />
       <Header />
       <HeroSection />

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function CallToAction() {
   return (
     <div className="bg-[var(--gray-900)]  py-[100px] ">
