@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
-// Deployed to https://vimalraj9423.github.io/my-portfolio on GitHub Pages
-const basePath = process.env.NODE_ENV === "production" ? "/my-portfolio" : "";
+// The site is served from the root of the custom domain https://vimalraj.net,
+// so no basePath is needed. If you ever serve it from
+// https://<user>.github.io/my-portfolio instead, build with BASE_PATH=/my-portfolio.
+const basePath = process.env.BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {
   output: "export",
