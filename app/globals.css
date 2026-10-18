@@ -1,91 +1,130 @@
-
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import "tailwindcss";
 
-/* Removed @theme block, moved font variables to :root */
-:root { 
-  --color-primary: #A53DFF; 
-  
-  --font-raleway: "Raleway", sans-serif;
-  --font-lato: "Lato", sans-serif;
-  --font-poppins: 'Poppins', sans-serif;
-  --font-work-sans: 'Work Sans', sans-serif;
+/* Class-based dark mode: `dark:` utilities apply when <html class="dark"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-primary: #a53dff;
+  --color-primary-dark: #8a1fe6;
 
   --natural-black: #333333;
   --gray-white: #ffffff;
   --gray-900: #132238;
-  --gray-700:#424E60;
+  --gray-700: #424e60;
   --gray-600: #556070;
-  --gray-300:#A5ACB5;
-  --gray-400:#87909D;
-  --light-primay-background: #EDD8FF;
-  --grey-1:#556070;
-  --gray-50:#F0F1F3;
+  --gray-400: #87909d;
+  --gray-300: #a5acb5;
+  --gray-200: #c3c7ce;
+  --gray-50: #f0f1f3;
+  --grey-1: #556070;
+  --light-primay-background: #edd8ff;
+
+  /* Semantic tokens */
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --border: #f0f1f3;
+  --band: #132238;
+  --chip-text: #8a1fe6;
+  color-scheme: light;
 }
-/* Apply Lato font globally for testing */
+
+.dark {
+  --gray-900: #eef1f6;
+  --gray-700: #c9d0db;
+  --gray-600: #a3adbb;
+  --gray-400: #7d8796;
+  --gray-300: #a5acb5;
+  --gray-200: #2c3a50;
+  --gray-50: #0f1829;
+  --grey-1: #a3adbb;
+  --natural-black: #e5e9f0;
+  --light-primay-background: #2c1846;
+
+  --bg: #0a1220;
+  --surface: #141e31;
+  --border: #23304a;
+  --band: #060c17;
+  --chip-text: #d6b4ff;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: var(--font-poppins);
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-lato: var(--font-lato);
-  --hero-section: calc(100vh - 56px); 
-} 
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: #A53DFF; 
-
-  --header-background:#071a27;
-  --circle-background:#8e3cec1a;
-  --color-button-from:#55a6a6;
-  --color-button-to:#8192a9;
-}
-}
-
-body {
-  font-family: var(--font-work-sans);
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
-}
-.heading1{
-  font-size: 3.375rem;
-  font-weight: 600;
+  font-family: var(--font-work-sans-next), "Work Sans", system-ui, sans-serif;
   color: var(--gray-900);
-  font-family: var(--font-work-sans);
+  background: var(--bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-.heading2{
-  font-size: 2.375rem;
+
+/* Offset anchor targets so the sticky header doesn't cover section titles */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+::selection {
+  background: var(--light-primay-background);
+  color: var(--color-primary-dark);
+}
+
+.heading1 {
+  font-size: clamp(2.25rem, 5vw, 3.375rem);
   font-weight: 600;
-  font-family: var(--font-work-sans);
+  line-height: 1.15;
   color: var(--gray-900);
 }
-.heading3{
-  font-size: 2rem;
+.heading2 {
+  font-size: clamp(1.75rem, 4vw, 2.375rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--gray-900);
+}
+.heading3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 600;
   color: var(--gray-900);
-  font-family: var(--font-work-sans);
 }
-.paragraph{
+.paragraph {
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 24px;
-  color: var(--gray-400);
-  font-family: var(--font-work-sans);
+  line-height: 1.6;
+  color: var(--gray-600);
+}
+.eyebrow {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+.animate-marquee-reverse {
+  animation: marquee 30s linear infinite reverse;
+}
+.marquee-group:hover .animate-marquee,
+.marquee-group:hover .animate-marquee-reverse {
+  animation-play-state: paused;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.caret {
+  animation: blink 1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .caret { animation: none; }
 }

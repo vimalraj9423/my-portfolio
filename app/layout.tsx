@@ -1,21 +1,38 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
+import Providers from "./components/Providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const workSans = Work_Sans({
+  variable: "--font-work-sans-next",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "vimalraj",
-  description: "this page about me",
+  title: "Vimal Raj — Full Stack Developer (Java, Spring Boot, Node.js, React, Next.js)",
+  description:
+    "Portfolio of Vimal Raj, a full stack developer building scalable web apps with Java Spring Boot, Node.js, React and Next.js.",
+  keywords: [
+    "Vimal Raj",
+    "Full Stack Developer",
+    "Java",
+    "Spring Boot",
+    "Node.js",
+    "React",
+    "Next.js",
+    "Portfolio",
+  ],
+  authors: [{ name: "Vimal Raj" }],
+  openGraph: {
+    title: "Vimal Raj — Full Stack Developer",
+    description:
+      "Java Spring Boot, Node.js, React and Next.js developer. View projects and get in touch.",
+    type: "website",
+  },
 };
+
+const themeScript = `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}if(t==="dark")document.documentElement.classList.add("dark")}catch(e){}})();`;
 
 export default function RootLayout({
   children,
@@ -23,11 +40,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Set the theme before first paint to avoid a light/dark flash */}
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className={`${workSans.variable} antialiased`}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
